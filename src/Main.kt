@@ -1,3 +1,17 @@
+
+
+interface Notificable{
+    fun enviarNotificacion()
+}
+
 fun main() {
-    println("Hello World!")
+    val notificaciones: List<Notificable> = listOf(
+        CorreoElectronico(),
+        MensajeTexto(),
+        NotificacionPush()
+    )
+
+    for (notificacion in notificaciones) {
+        println(notificacion.enviarNotificacion())
+    }
 }
