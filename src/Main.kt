@@ -12,6 +12,6 @@ fun main() {
     )
 
     for (notificacion in notificaciones) {
-        println(notificacion.enviarNotificacion())
+        notificacion.enviarNotificacion()
     }
 }
